@@ -10,7 +10,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/suppliers")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://inventory-frontend-fiinal-9wcs.vercel.app"
+	    },
+	    allowCredentials = "true"
+	)
 public class SupplierController {
     private final SupplierService supplierService;
 

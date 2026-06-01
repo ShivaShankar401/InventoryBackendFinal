@@ -13,7 +13,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(
+	    origins = {
+	        "http://localhost:5173",
+	        "https://inventory-frontend-fiinal-9wcs.vercel.app"
+	    },
+	    allowCredentials = "true"
+	)
 public class AuthController {
     private final UserService userService;
 
